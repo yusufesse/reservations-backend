@@ -14,6 +14,7 @@ COPY apps/payments ./apps/payments
 COPY libs ./libs
 
 RUN pnpm install
+RUN cd apps/payments && pnpm install
 
 RUN pnpm run build payments
 
